@@ -24,7 +24,7 @@ shopOne.generateHourlyCustomer(shopOne.min, shopOne.max);
   //generate number of hourlyCookies
 shopOne.generateHourlyCookies = function () {
   for(var i = 0; i < openHours.length; i++) {
-    var cookies = this.avgCookie * this.hourlyCustomers[i];
+    var cookies = Math.floor(this.avgCookie * this.hourlyCustomers[i]);
     console.log(cookies);
     this.hourlyCookies.push(cookies);
     shopOne.total += cookies;
@@ -47,6 +47,7 @@ shopOne.listSales = function () {
 shopOne.listSales();
 
 ////////////////////////////////////////////////////////////////////////////////
+//these are the basic default properties of this object
 var shopTwo = {
   min: 3,
   max: 24,
@@ -69,7 +70,7 @@ shopTwo.generateHourlyCustomer(shopTwo.min, shopTwo.max);
   //generate number of hourlyCookies
 shopTwo.generateHourlyCookies = function () {
   for(var i = 0; i < openHours.length; i++) {
-    var cookies = this.avgCookie * this.hourlyCustomers[i];
+    var cookies = Math.floor(this.avgCookie * this.hourlyCustomers[i]);
     console.log(cookies);
     this.hourlyCookies.push(cookies);
     shopTwo.total += cookies;
@@ -113,7 +114,7 @@ shopThree.generateHourlyCustomer(shopThree.min, shopThree.max);
   //generate number of hourlyCookies
 shopThree.generateHourlyCookies = function () {
   for(var i = 0; i < openHours.length; i++) {
-    var cookies = this.avgCookie * this.hourlyCustomers[i];
+    var cookies = Math.floor(this.avgCookie * this.hourlyCustomers[i]);
     console.log(cookies);
     this.hourlyCookies.push(cookies);
     shopThree.total += cookies;
@@ -157,7 +158,7 @@ shopFour.generateHourlyCustomer(shopFour.min, shopFour.max);
   //generate number of hourlyCookies
 shopFour.generateHourlyCookies = function () {
   for(var i = 0; i < openHours.length; i++) {
-    var cookies = this.avgCookie * this.hourlyCustomers[i];
+    var cookies = Math.floor(this.avgCookie * this.hourlyCustomers[i]);
     console.log(cookies);
     this.hourlyCookies.push(cookies);
     shopFour.total += cookies;
@@ -201,7 +202,7 @@ shopFive.generateHourlyCustomer(shopFive.min, shopFive.max);
   //generate number of hourlyCookies
 shopFive.generateHourlyCookies = function () {
   for(var i = 0; i < openHours.length; i++) {
-    var cookies = this.avgCookie * this.hourlyCustomers[i];
+    var cookies = Math.floor(this.avgCookie * this.hourlyCustomers[i]);
     console.log(cookies);
     this.hourlyCookies.push(cookies);
     shopFive.total += cookies;
