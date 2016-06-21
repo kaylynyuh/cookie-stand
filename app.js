@@ -39,7 +39,10 @@ shopOne.listSales = function () {
     var listItem = document.createElement('li');
     listItem.textContent = 'At ' + openHours[i] + ', ' + shopOne.hourlyCookies[i] + ' cookies were sold.';
     sales.appendChild(listItem);
-  }
+  };
+  var total = document.createElement('ul');
+  total.textContent = 'Total : ' + shopOne.total;
+  sales.appendChild(total);
 };
 shopOne.listSales();
 
@@ -82,6 +85,9 @@ shopTwo.listSales = function () {
     listItem.textContent = 'At ' + openHours[i] + ', ' + shopTwo.hourlyCookies[i] + ' cookies were sold.';
     sales2.appendChild(listItem);
   }
+  var total = document.createElement('ul');
+  total.textContent = 'Total : ' + shopTwo.total;
+  sales2.appendChild(total);
 };
 shopTwo.listSales();
 ///////////////////////////////////////////////////////////////////////////////
@@ -123,6 +129,9 @@ shopThree.listSales = function () {
     listItem.textContent = 'At ' + openHours[i] + ', ' + shopThree.hourlyCookies[i] + ' cookies were sold.';
     sales3.appendChild(listItem);
   }
+  var total = document.createElement('ul');
+  total.textContent = 'Total : ' + shopThree.total;
+  sales3.appendChild(total);
 };
 shopThree.listSales();
 ///////////////////////////////////////////////////////////////////////////////
@@ -164,6 +173,9 @@ shopFour.listSales = function () {
     listItem.textContent = 'At ' + openHours[i] + ', ' + shopFour.hourlyCookies[i] + ' cookies were sold.';
     sales4.appendChild(listItem);
   }
+  var total = document.createElement('ul');
+  total.textContent = 'Total : ' + shopFour.total;
+  sales4.appendChild(total);
 };
 shopFour.listSales();
 ///////////////////////////////////////////////////////////////////////////////
@@ -205,6 +217,9 @@ shopFive.listSales = function () {
     listItem.textContent = 'At ' + openHours[i] + ', ' + shopFive.hourlyCookies[i] + ' cookies were sold.';
     sales5.appendChild(listItem);
   }
+  var total = document.createElement('ul');
+  total.textContent = 'Total : ' + shopFive.total;
+  sales5.appendChild(total);
 };
 shopFive.listSales();
 ///////////////////////////////////////////////////////////////////////////////
