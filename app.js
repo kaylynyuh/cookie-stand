@@ -51,9 +51,10 @@ function renderHeader () {
 
   var headerTitles = ['', 'Daily Location Total'];
   for(var i = 0; i < headerTitles.length; i++) {
+    //'for each pass, this code will run'
     var thEl = document.createElement('th');//create
     thEl.textContent = headerTitles[i];//add content
-    trEl.appendChild(thEl);//append
+    trEl.appendChild(thEl);//append this table header element into a row
   }
   for(var i = 0; i < openHours.length; i++) {
     var thEl = document.createElement('th');
