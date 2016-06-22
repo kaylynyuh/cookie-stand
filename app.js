@@ -89,3 +89,18 @@ renderTableData(shopTwo);
 renderTableData(shopThree);
 renderTableData(shopFour);
 renderTableData(shopFive);
+
+var newStoreForm = document.getElementById('new-location');
+newStoreForm.addEventListener('submit', function(event) {
+  event.preventDefault();
+  if(!event.target.store.value && !event.target.newMin.value && !event.target.newMax.value && !event.target.newAvg.value) {
+    return alert('Cannot be empty');
+  }
+  var newStoreName = event.target.store.value;
+  var newMinimum = parseFloat(event.target.newMin.value);
+  var newMaximum = parseFloat(event.target.newMax.value);
+  var newAverage = parseFloat(event.target.newAvg.value);
+  var newStore = new Shops(newStoreName, newMinimum, newMaximum, newAverage);
+  newStore.generateCookiesForEachHour();
+  renderTableData(newStore);
+});
