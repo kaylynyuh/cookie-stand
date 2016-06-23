@@ -18,13 +18,13 @@ function Shops(locationName, minCustPerHour, maxCustPerHour, avgCookiesPerCust) 
   this.cookiesForEachHourArray = [];
   this.totalDailySales = 0;
 };
-
+//creating instances of Shops constructor
 var shopOne = new Shops('1st and Pike', 23, 65, 6.3);
 var shopTwo = new Shops('Seatac Airport', 3, 24, 1.2);
 var shopThree = new Shops('Seattle Center', 11, 38, 3.7);
 var shopFour = new Shops('Capitol Hill', 20, 38, 2.3);
 var shopFive = new Shops('Alki', 2, 16, 4.6);
-
+//using prototypal inheritance
 Shops.prototype.generateHourlyCustomer = function () {
   for(var i = 0; i < openHours.length; i++) {
     var custPerHour = Math.floor(Math.random() * (this.maxCustPerHour - this.minCustPerHour + 1)) + this.minCustPerHour;
