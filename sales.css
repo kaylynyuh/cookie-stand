@@ -37,6 +37,12 @@ body {
   margin-top: 50px;
 }
 
+p {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+}
+
 section {
   padding-top: 30px;
   text-align: center;

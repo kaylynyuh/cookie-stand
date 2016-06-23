@@ -1,0 +1,42 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+header {
+  background-color: #006A55;
+  height: 200px;
+}
+
+.inner {
+  width: 960px;
+  margin: 0 auto;
+}
+
+.inner img {
+  margin-top: 30px;
+  width: 325px;
+  height: 125px;
+  float: left;
+  margin-top: 30px;
+}
+
+.inner ul {
+  display: inline-block;
+  margin-top: 90px;
+  margin-left: -10px;
+  font-size: 24px;
+}
+
+.inner ul li {
+  display: inline-block;
+  margin-left: 50px;
+}
+
+.inner a {
+  display: inline-block;
+  text-decoration: none;
+  margin-left: 50px;
+  color: #fff;
+}
