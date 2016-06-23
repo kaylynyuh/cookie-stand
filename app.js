@@ -2,6 +2,13 @@
 
 var openHours = ['6am','7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
 
+// array for tracking shop hourly totals
+var shopHourlyTotals = new Array(15); // makes an empty array of length 15
+shopHourlyTotals.fill(0,0,15); // fills empty array with default values
+
+// variable for tracking shop daily totals
+var shopDailyTotals = 0;
+
 function Shops(locationName, minCustPerHour, maxCustPerHour, avgCookiesPerCust) {
   this.locationName = locationName;
   this.minCustPerHour = minCustPerHour;
@@ -76,19 +83,42 @@ function renderTableData (stores) {
   var tdEl = document.createElement('td');
   tdEl.textContent = stores.totalDailySales;
   trEl.appendChild(tdEl);
+  shopDailyTotals += stores.totalDailySales;
 
   for(var i = 0; i < openHours.length; i++) {
     var tdEl = document.createElement('td');
     tdEl.textContent = stores.cookiesForEachHourArray[i];
     trEl.appendChild(tdEl);
+    shopHourlyTotals[i] += stores.cookiesForEachHourArray[i];
   }
   cookiesTable.appendChild(trEl);
 };
+
+function renderTotals() {
+  var trEl = document.createElement('tr');
+
+  var tdEl = document.createElement('td');//create
+  tdEl.textContent = 'Totals';//add content
+  trEl.appendChild(tdEl);//append
+
+  var tdEl = document.createElement('td');
+  tdEl.textContent = shopDailyTotals;
+  trEl.appendChild(tdEl);
+
+  for(var i = 0; i < shopHourlyTotals.length; i++) {
+    var tdEl = document.createElement('td');
+    tdEl.textContent = shopHourlyTotals[i];
+    trEl.appendChild(tdEl);
+  }
+  cookiesTable.appendChild(trEl);
+}
+
 renderTableData(shopOne);
 renderTableData(shopTwo);
 renderTableData(shopThree);
 renderTableData(shopFour);
 renderTableData(shopFive);
+renderTotals();
 
 var newStoreForm = document.getElementById('new-location');
 newStoreForm.addEventListener('submit', function(event) {
