@@ -13,7 +13,8 @@ body {
 
 .jumbotron-inner {
   background-image: url(images/salmon.png);
-  width: 100%;
+  width: 960px;
+  margin: 0 auto;
   height: 325px;
   background-repeat:no-repeat;
   background-position: center;
@@ -51,7 +52,6 @@ ul {
   margin: 0px;
   padding-bottom: 20px;
 }*/
-
 table, td {
 	border: 1px solid black;
   border-collapse:collapse;
