@@ -70,3 +70,49 @@ th {
 	color: white;
   padding: 15px;
 }
+
+fieldset{
+  text-align: center;
+  border: none;
+  margin-top: 50px;
+}
+
+label {
+    margin-left: 20px;
+}
+
+input[type="text"] {
+  padding: 5px 10px;
+  border: solid 1px #444;
+  border-radius: 3px;
+}
+
+input[type="text"]:focus {
+  color: black;
+}
+
+.submit-input[type="text"] {
+  padding: 5px 10px;
+  border: solid 1px #444;
+  border-radius: 3px;
+}
+
+.submit-input[type="text"]:focus {
+  background: #444;
+  color: #fff;
+}
+
+.submit-input[type="submit"] {
+  border: none;
+  padding: 8px 22px;
+  border-radius: 3px;
+  color: #fff;
+  background: #555;
+  transition: 750ms all;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+.submit-input[type="submit"]:hover {
+  background: #999;
+}
