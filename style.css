@@ -79,6 +79,7 @@ fieldset{
 
 label {
     margin-left: 20px;
+    font-size: 18px;
 }
 
 input[type="text"] {
@@ -111,6 +112,7 @@ input[type="text"]:focus {
   transition: 750ms all;
   cursor: pointer;
   margin-left: 20px;
+  font-size: 16px;
 }
 
 .submit-input[type="submit"]:hover {

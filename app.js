@@ -131,6 +131,10 @@ newStoreForm.addEventListener('submit', function(event) {
   var newMaximum = parseFloat(event.target.newMax.value);
   var newAverage = parseFloat(event.target.newAvg.value);
   var newStore = new Shops(newStoreName, newMinimum, newMaximum, newAverage);
+  event.target.store.value = null;
+  event.target.newMin.value = null;
+  event.target.newMax.value = null;
+  event.target.newAvg.value = null;
   newStore.generateCookiesForEachHour();
   renderTableData(newStore);
 });
