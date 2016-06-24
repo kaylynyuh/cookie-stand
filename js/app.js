@@ -4,7 +4,7 @@ var openHours = ['6am','7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm'
 
 // array for tracking shop hourly totals
 var shopHourlyTotals = new Array(15); // makes an empty array of length 15
-shopHourlyTotals.fill(0,0,15); // fills empty array with default values
+shopHourlyTotals.fill(0,0,15); // fills empty array with default values. value, starting index, 15
 
 // variable for tracking shop daily totals
 var shopDailyTotals = 0;
@@ -89,7 +89,7 @@ function renderTableData (stores) {
     var tdEl = document.createElement('td');
     tdEl.textContent = stores.cookiesForEachHourArray[i];
     trEl.appendChild(tdEl);
-    shopHourlyTotals[i] += stores.cookiesForEachHourArray[i];
+    shopHourlyTotals[i] += stores.cookiesForEachHourArray[i];//why i needed array with default values
   }
   cookiesTable.appendChild(trEl);
 };

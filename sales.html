@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Salmon Cookie Sales</title>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/sales.css">
   </head>
   <body>
   <div class=container>
@@ -14,51 +14,26 @@
     </div>
     <section>
       <h1 class="title">Cookies Sold Per Hour</h1>
+      <p><a href="index.html">Click Here To See Home Page</a></p>
     </section>
+    <div class="hightlight">
     <form id = "new-location">
+    </div>
       <fieldset>
         <label for = "store">Location Name: </label>
         <input name = "store" type = "text"/>
-
         <label for = "newMin">Minimum: </label>
         <input name = "newMin" type = "text"/>
-
         <label for = "newMax">Maximum: </label>
         <input name = "newMax" type = "text"/>
-
         <label for = "newAvg">Average: </label>
         <input name = "newAvg" type = "text"/>
-
         <input class = "submit-input" type = "submit" value = "Create New Location">
         </fieldset>
       </form>
-    <!--
-    <section>
-      <h1>1st and Pike</h1>
-      <ul id = "sales"></ul>
-    </section>
-    <section>
-      <h1>SeaTac Airport</h1>
-      <ul id = "sales2"></ul>
-    </section>
-    <section>
-      <h1>Seattle Center</h1>
-      <ul id = "sales3"></ul>
-    </section>
-    <section>
-      <h1>Capitol Hill</h1>
-      <ul id = "sales4"></ul>
-    </section>
-    <section>
-      <h1>Alki</h1>
-      <ul id = "sales5"></ul>
-    </section>
-</div>
--->
-<div class="table-content">
-  <table id="cookies"></table>
-</div>
-
+    <div class="table-content">
+      <table id="cookies"></table>
+    </div>
   </body>
-    <script src="app.js"></script>
+    <script src="js/app.js"></script>
 </html>
