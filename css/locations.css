@@ -60,6 +60,14 @@ img .seattle {
   padding-left: 0px;
 }
 
+.locations {
+  list-style: none;
+  font-size: 20px;
+}
+
+.locations p {
+  font-size: 16px;
+}
 /* Footer Content */
 footer {
   height: 200px;
