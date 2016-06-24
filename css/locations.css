@@ -63,10 +63,18 @@ img .seattle {
 .locations {
   list-style: none;
   font-size: 20px;
+  margin-left: 0px;
+  margin-top: -10px;
+  padding-left: 0px;
 }
 
 .locations p {
   font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.locations li {
+  margin-bottom: 5px;
 }
 /* Footer Content */
 footer {
