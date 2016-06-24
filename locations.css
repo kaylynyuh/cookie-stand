@@ -1,0 +1,100 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+header {
+  background-color: #006A55;
+  height: 200px;
+}
+
+.inner {
+  width: 960px;
+  margin: 0 auto;
+}
+
+.inner img {
+  margin-top: 30px;
+  width: 325px;
+  height: 125px;
+  float: left;
+  margin-top: 30px;
+}
+
+.inner ul {
+  display: inline-block;
+  margin-top: 90px;
+  margin-left: -10px;
+  font-size: 24px;
+}
+
+.inner ul li {
+  display: inline-block;
+  margin-left: 50px;
+}
+
+.inner a {
+  display: inline-block;
+  text-decoration: none;
+  margin-left: 50px;
+  color: #fff;
+}
+
+section {
+  height: 150px;
+  width: 960px;
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+section h1 {
+  text-align: center;
+  padding-top: 50px;
+}
+
+.shirt {
+  width: 300px;
+  height: 300px;
+}
+
+.salmon_cookies {
+  width: 300px;
+  height: 300px;
+}
+
+/* Footer Content */
+footer {
+  height: 200px;
+  padding-bottom: 20px;
+  background-color: #006A55;
+  font-family: 'Roboto Condensed', sans-serif;
+  margin-top: 200px;
+}
+
+.footer-content {
+	margin-top: 50px;
+  color: white;
+}
+
+.footer-content p {
+	font-size: 25px;
+	padding-top: 0px;
+
+}
+
+.footer-content a {
+	font-size: 24px;
+	font-weight: 100;
+}
+/* End Footer Content*/
+
+/* FA Icons */
+.fa-icons {
+	font-size: 45px;
+}
+
+.header-active {
+	color:white;
+}
