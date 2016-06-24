@@ -42,26 +42,22 @@ header {
 }
 
 section {
-  height: 150px;
-  width: 960px;
-  margin: 0 auto;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  height: 100px;
+  margin-top: 25px;
+  margin-bottom: 25px;
 }
 
 section h1 {
   text-align: center;
-  padding-top: 50px;
+  padding-top: 25px;
 }
 
-.shirt {
-  width: 300px;
-  height: 300px;
+.section-content {
+  height: 400px;
 }
 
-.salmon_cookies {
-  width: 300px;
-  height: 300px;
+img .seattle {
+  padding-left: 0px;
 }
 
 /* Footer Content */

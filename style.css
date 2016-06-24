@@ -42,11 +42,10 @@ header {
 }
 
 section {
-  height: 300px;
   width: 960px;
   margin: 0 auto;
   margin-top: 75px;
-  margin-bottom: 100px;
+  margin-bottom: 0px;
 }
 
 section h1 {
@@ -64,6 +63,7 @@ section p {
 }
 
 .section_two {
+  margin-top: 0px;
   margin-bottom: 100px;
 }
 
@@ -93,7 +93,7 @@ footer {
   padding-bottom: 20px;
   background-color: #006A55;
   font-family: 'Roboto Condensed', sans-serif;
-  margin-top: 200px;
+  margin-top: 50px;
 }
 
 .footer-content {
