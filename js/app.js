@@ -49,9 +49,6 @@ shopFour.generateCookiesForEachHour();
 shopFive.generateCookiesForEachHour();
 //end constructor function
 
-// shops array
-var shopObjects = [shopOne, shopTwo, shopThree, shopFour, shopFive];
-
 //this accesses the table in the HTML
 var cookiesTable = document.getElementById('cookies');
 
@@ -130,38 +127,14 @@ newStoreForm.addEventListener('submit', function(event) {
     return alert('Cannot be empty');
   }
   var newStoreName = event.target.store.value;
-
-  // add if statement here
-  /*
-  var existingStore = false;
-  for (var i = 0; i < shopObjects.length; i++) {
-    if(newStoreName == shopObjects[i].locationName) {
-      existingStore = shopObjects[i];
-      break;
-    }
-  }
-  */
   var newMinimum = parseFloat(event.target.newMin.value);
   var newMaximum = parseFloat(event.target.newMax.value);
   var newAverage = parseFloat(event.target.newAvg.value);
-  /*
-  // handing existing store
-  if (existingStore) {
-    console.log('existing store');
-  } else{
-    var newStore = new Shops(newStoreName, newMinimum, newMaximum, newAverage);
-    newStore.generateCookiesForEachHour();
-    renderTableData(newStore);
-  }
-  */
-
   var newStore = new Shops(newStoreName, newMinimum, newMaximum, newAverage);
-  newStore.generateCookiesForEachHour();
-  renderTableData(newStore);
-
-  // clear out fields
   event.target.store.value = null;
   event.target.newMin.value = null;
   event.target.newMax.value = null;
   event.target.newAvg.value = null;
+  newStore.generateCookiesForEachHour();
+  renderTableData(newStore);
 });
