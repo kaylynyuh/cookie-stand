@@ -80,12 +80,24 @@ section h1 {
   width:100%;
   text-align:center
 }
+
 .merchandise-item {
   display: inline-block;
-  padding-bottom: 75px;
   margin: 20px;
+  margin-bottom: 75px;
+  position: relative;;
 }
 
+.merchandise-item h2 {
+  bottom: 3px;
+  position: absolute;
+  font-size: 22px;
+  text-align: center;
+  width: 100%;
+  background-color: rgba(40,181,141,.7);
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
 .shirt {
   width: 300px;
   height: 300px;
@@ -96,7 +108,8 @@ section h1 {
   height: 300px;
 }
 
-/* Footer Content */
+/* Footer Styles */
+
 footer {
   background-color: #444;
   font-family: helvetica;
@@ -111,7 +124,7 @@ footer p {
   padding-left: 200px;
   line-height: 18px;
 }
-/* End Footer Content*/
+/* End Footer Styles*/
 
 /* FA Icons */
 .fa-icons {
