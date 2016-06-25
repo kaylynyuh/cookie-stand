@@ -1,12 +1,15 @@
+/* base styles */
+
 body {
-  margin: 0px;
-  padding: 0px;
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: helvetica;
+  font-size: 18px;
 }
 
+/* site styles */
+
 header {
-  background-color: #006A55;
-  height: 200px;
+  background: #444;
+  height: 150px;
 }
 
 .inner {
@@ -15,34 +18,39 @@ header {
 }
 
 .inner img {
-  margin-top: 30px;
-  width: 325px;
-  height: 125px;
   float: left;
-  margin-top: 30px;
-}
-
-.inner ul {
-  display: inline-block;
-  margin-top: 90px;
-  margin-left: -10px;
-  font-size: 24px;
+  margin-top: 15px;
+  margin-top: 20px;
+  width: 325px;
+  height: 110px;
+  float: left;
 }
 
 .inner ul li {
   display: inline-block;
   margin-left: 50px;
+  margin-top: 68px;
+  list-style: none;
 }
 
 .inner a {
-  display: inline-block;
-  text-decoration: none;
-  margin-left: 50px;
   color: #fff;
+  font-family: helvetica;
+  text-decoration: none;
+  margin-left: 45px;
+  font-size: 20px;
+}
+
+.clearfix {
+  clear:both;
+}
+
+section,footer {
+  font-family: helvetica!important;
 }
 
 section {
-  height: 150px;
+  /*height: 150px;*/
   width: 960px;
   margin: 0 auto;
   margin-top: 50px;
@@ -52,6 +60,14 @@ section {
 section h1 {
   text-align: center;
   padding-top: 50px;
+}
+
+.section_two {
+  width:100%;
+  text-align:center
+}
+.merchandise-item {
+  display: inline-block;
 }
 
 .shirt {
@@ -66,33 +82,28 @@ section h1 {
 
 /* Footer Content */
 footer {
-  height: 200px;
-  padding-bottom: 20px;
-  background-color: #006A55;
-  font-family: 'Roboto Condensed', sans-serif;
-  margin-top: 200px;
-}
-
-.footer-content {
-	margin-top: 50px;
+  background-color: #444;
+  font-family: helvetica;
+  height: 150px;
   color: white;
 }
 
-.footer-content p {
-	font-size: 25px;
-	padding-top: 0px;
-
-}
-
-.footer-content a {
+footer p {
 	font-size: 24px;
 	font-weight: 100;
+  padding-top: 40px;
+  padding-left: 200px;
+  line-height: 18px;
 }
 /* End Footer Content*/
 
 /* FA Icons */
 .fa-icons {
+  float: right;
 	font-size: 45px;
+  color:white;
+  padding-right: 200px;
+  margin-top: -45px;
 }
 
 .header-active {
