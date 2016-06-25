@@ -45,9 +45,36 @@ main{
   margin: 0 auto;
 }
 
-section {
-  width: 465px;
-  height: 300px;
+.section_one {
+  clear:left;
+  margin-top: 75px;
+}
+
+.section_one img {
+  display: block;
+  float: left;
+  width: 50%;
+  margin-right: 30px;
+  /* added for footer gutter */
+  margin-bottom: 30px;
+}
+
+.section_one h1 {
+  float: left;
+  font-size: 28px;
+}
+
+.section_one p {
+  float: left;
+  width: calc(50% - 30px);
+  height: 260px;
+  overflow: auto;
+  line-height: 26px;
+  margin-top: 20px;
+}
+
+.clearfix {
+  clear:both;
 }
 
 .family {
@@ -55,6 +82,44 @@ section {
   height: 300px;
 }
 
+/*.section_two {
+  float: left;
+  width: 465px;
+  height: 300px;
+  line-height: 175%
+}*/
+.section_two  {
+  display: block;
+  float: left;
+  width: 50%;
+  margin-right: 30px;
+  /* added for footer gutter */
+  margin-top: 50px;
+  margin-bottom: 75px;
+  line-height: 26px;
+}
+
+.fisheys {
+  float: left;
+  width: 150px;
+  margin-right: 20px;
+  margin-top: 75px;
+}
+
+.section_three p {
+  float: left;
+  width: calc(50% - 30px);
+  height: 260px;
+  overflow: auto;
+  line-height: 26px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.chinook {
+  height: 90px;
+  float: right;
+}
 
 
 
