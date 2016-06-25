@@ -41,6 +41,17 @@ header {
   font-size: 20px;
 }
 
+.inner h1 {
+  position: absolute;
+  top: 53px;
+  width: 327px;
+  text-align: center;
+  font-family: 'Courgette', cursive;
+  font-size: 36px;
+  color: white;
+  text-shadow: 4px 4px #000;
+}
+
 .clearfix {
   clear:both;
 }

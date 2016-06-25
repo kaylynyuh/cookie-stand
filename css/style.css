@@ -23,7 +23,6 @@ header {
   margin-top: 20px;
   width: 325px;
   height: 110px;
-  float: left;
 }
 
 .inner ul li {
@@ -39,6 +38,17 @@ header {
   text-decoration: none;
   margin-left: 45px;
   font-size: 20px;
+}
+
+.inner h1 {
+  position: absolute;
+  top: 53px;
+  width: 327px;
+  text-align: center;
+  font-family: 'Courgette', cursive;
+  font-size: 36px;
+  color: white;
+  text-shadow: 4px 4px #000;
 }
 
 main{
