@@ -22,16 +22,18 @@ var shopTwo = new Shops('Seatac Airport', 3, 24, 1.2);
 var shopThree = new Shops('Seattle Center', 11, 38, 3.7);
 var shopFour = new Shops('Capitol Hill', 20, 38, 2.3);
 var shopFive = new Shops('Alki', 2, 16, 4.6);
+var shopObjects = [shopOne, shopTwo, shopThree, shopFour, shopFive];
 
 Shops.prototype.generateHourlyCustomer = function () {
+  this.custEachHourArray = [];
   for(var i = 0; i < openHours.length; i++) {
     var custPerHour = Math.floor(Math.random() * (this.maxCustPerHour - this.minCustPerHour + 1)) + this.minCustPerHour;
-    console.log(custPerHour);
-    console.log(this.minCustPerHour);
     this.custEachHourArray.push(custPerHour);
   };
 };
 Shops.prototype.generateCookiesForEachHour = function () {
+  this.cookiesForEachHourArray = [];
+  this.totalDailySales = 0;
   this.generateHourlyCustomer();
   for(var i = 0; i < openHours.length; i++) {
     var cookiesForEachHour = Math.floor(this.custEachHourArray[i] * this.avgCookiesPerCust);
@@ -40,11 +42,10 @@ Shops.prototype.generateCookiesForEachHour = function () {
   }
 };
 
-shopOne.generateCookiesForEachHour();
-shopTwo.generateCookiesForEachHour();
-shopThree.generateCookiesForEachHour();
-shopFour.generateCookiesForEachHour();
-shopFive.generateCookiesForEachHour();
+// loop through shop objects and generate cookies per hour
+for (var i = 0; i < shopObjects.length; i++) {
+  shopObjects[i].generateCookiesForEachHour();
+}
 
 var cookiesTable = document.getElementById('cookies');
 function renderHeader () {
@@ -82,11 +83,14 @@ function renderTotals() {
   cookiesTable.appendChild(trEl);
 }
 
-renderTableData(shopOne);
-renderTableData(shopTwo);
-renderTableData(shopThree);
-renderTableData(shopFour);
-renderTableData(shopFive);
+// loop through shop objects and render table data
+function renderTables() {
+  for (var i = 0; i < shopObjects.length; i++) {
+    renderTableData(shopObjects[i]);
+  }
+}
+
+renderTables();
 renderTotals();
 
 var newStoreForm = document.getElementById('new-location');
@@ -95,17 +99,41 @@ newStoreForm.addEventListener('submit', function(event) {
   if(!event.target.store.value && !event.target.newMin.value && !event.target.newMax.value && !event.target.newAvg.value) {
     return alert('Cannot be empty');
   }
+  //check to see if new store name equals an already existing store
   var newStoreName = event.target.store.value;
   var newMinimum = parseFloat(event.target.newMin.value);
   var newMaximum = parseFloat(event.target.newMax.value);
   var newAverage = parseFloat(event.target.newAvg.value);
-  var newStore = new Shops(newStoreName, newMinimum, newMaximum, newAverage);
+  var existingStore = false;
+  for(var i = 0; i < shopObjects.length; i++) {
+    if(newStoreName === shopObjects[i].locationName) {
+      existingStore = shopObjects[i];
+      break;
+    }
+  }
+  // if no existing store is found
+  if (!existingStore) {
+    var newStore = new Shops(newStoreName, newMinimum, newMaximum, newAverage);
+    newStore.generateCookiesForEachHour();
+    shopObjects.push(newStore);
+    //renderTableData(newStore);
+  } else { // if store is found
+    existingStore.minCustPerHour = newMinimum;
+    existingStore.maxCustPerHour = newMaximum;
+    existingStore.avgCookiesPerCust = newAverage;
+    existingStore.generateCookiesForEachHour();
+  }
+
+  document.getElementById('cookies').innerHTML = ''; // clear out table
+  renderHeader();
+  renderTables();
+  renderTotals();
+
   event.target.store.value = null;
   event.target.newMin.value = null;
   event.target.newMax.value = null;
   event.target.newAvg.value = null;
-  newStore.generateCookiesForEachHour();
-  renderTableData(newStore);
+
 });
 
 //global function to buil elements
