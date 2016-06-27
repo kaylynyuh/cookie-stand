@@ -5,7 +5,7 @@ body {
   font-size: 18px;
 }
 
-/* site styles */
+/* header styles */
 
 header {
   background: #444;
@@ -51,9 +51,12 @@ header {
   color: white;
   text-shadow: 4px 4px #000;
 }
+
 .clearfix {
   clear:both;
 }
+
+/* content styles */
 
 section,footer {
   font-family: helvetica!important;
@@ -108,7 +111,7 @@ section h1 {
   height: 300px;
 }
 
-/* Footer Styles */
+/* footer Styles */
 
 footer {
   background-color: #444;
@@ -124,7 +127,6 @@ footer p {
   padding-left: 200px;
   line-height: 18px;
 }
-/* End Footer Styles*/
 
 /* FA Icons */
 .fa-icons {

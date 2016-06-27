@@ -51,6 +51,8 @@ header {
   text-shadow: 4px 4px #000;
 }
 
+/* content styles */
+
 main{
   width: 960px;
   margin: 0 auto;
@@ -97,12 +99,6 @@ section,footer {
   height: 300px;
 }
 
-/*.section_two {
-  float: left;
-  width: 465px;
-  height: 300px;
-  line-height: 175%
-}*/
 .section_two  {
   display: block;
   float: left;
@@ -138,7 +134,8 @@ section,footer {
   float: right;
 }
 
-/* Footer Content */
+/* footer styles */
+
 footer {
   background-color: #444;
   font-family: helvetica;
@@ -153,7 +150,6 @@ footer p {
   padding-left: 200px;
   line-height: 18px;
 }
-/* End Footer Content*/
 
 /* FA Icons */
 .fa-icons {

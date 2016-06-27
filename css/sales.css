@@ -1,3 +1,5 @@
+/* base styles */
+
 body {
   margin: 0px;
   padding: 0px;
@@ -5,10 +7,12 @@ body {
   background-color: #E1E4E6;
 }
 
+/* header styles */
+
 .jumbotron {
   width: 100%;
   height: 325px;
-  background-color: #006A55;
+  background-color: #444;
 }
 
 .jumbotron-inner {
@@ -26,11 +30,14 @@ body {
   position: absolute;
   width: 100%;
   z-index: 1;
-  padding-top: 120px;
+  padding-top: 100px;
   font-family: 'Courgette', cursive;
-  font-size: 50px;
-  color: #111;
+  text-shadow: 3px 3px #000;
+  font-size: 60px;
+  color: #fff;
 }
+
+/* content styles */
 
 .title {
   text-align: center;
@@ -75,6 +82,8 @@ th {
 	color: white;
   padding: 15px;
 }
+
+/* form styles */
 
 fieldset{
   text-align: center;
