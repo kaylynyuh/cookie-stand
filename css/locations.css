@@ -56,6 +56,8 @@ header {
   clear:both;
 }
 
+/* content styles */
+
 section,footer {
   font-family: helvetica!important;
 }
@@ -106,7 +108,8 @@ section h1 {
   margin-bottom: 5px;
 }
 
-/* Footer Content */
+/* footer styles */
+
 footer {
   background-color: #444;
   font-family: helvetica;
@@ -121,7 +124,7 @@ footer p {
   padding-left: 200px;
   line-height: 18px;
 }
-/* End Footer Content*/
+
 
 /* FA Icons */
 .fa-icons {

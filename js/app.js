@@ -42,7 +42,7 @@ Shops.prototype.generateCookiesForEachHour = function () {
   }
 };
 
-// loop through shop objects and generate cookies per hour
+// loop through shop objects and generate cookies per hour, DRY- don't have to call it 5 times
 for (var i = 0; i < shopObjects.length; i++) {
   shopObjects[i].generateCookiesForEachHour();
 }
@@ -111,7 +111,7 @@ newStoreForm.addEventListener('submit', function(event) {
       break;
     }
   }
-  // if no existing store is found
+  // if no existing store is found, if existsing store ===false
   if (!existingStore) {
     var newStore = new Shops(newStoreName, newMinimum, newMaximum, newAverage);
     newStore.generateCookiesForEachHour();
